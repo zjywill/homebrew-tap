@@ -5,6 +5,14 @@ class Thegit < Formula
   sha256 "81cebaaf8db0cecead87f5fbf158fffbbc568307797b855708cf027acffdce41"
   license "MIT"
 
+  # Tags, not releases: the source repo publishes no GitHub Release object,
+  # so :github_latest would find nothing to compare against.
+  livecheck do
+    url "https://github.com/zjywill/TheGit.git"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :git
+  end
+
   depends_on xcode: ["15.0", :build]
   depends_on macos: :sonoma
 

@@ -2,8 +2,8 @@ class Pickroom < Formula
   desc "Keyboard-first RAW culling workspace for macOS"
   homepage "https://github.com/zjywill/Pickroom"
   url "ssh://git@github.com/zjywill/Pickroom.git",
-      tag:      "v0.1.0",
-      revision: "9a2877c515b4dde3f579485b9ec7e3036ec844f4"
+      tag:      "v0.1.1",
+      revision: "184f783790514656d1b48f333a612555859043b9"
 
   livecheck do
     url :stable
@@ -15,6 +15,7 @@ class Pickroom < Formula
   depends_on macos: :sonoma
 
   def install
+    ENV["OUTER_SANDBOX"] = "1"
     ENV["UNIVERSAL"] = "0"
     ENV["DMG"] = "0"
     ENV["DEST"] = buildpath/"dist"

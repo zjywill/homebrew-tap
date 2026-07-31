@@ -2,8 +2,8 @@ class Pickroom < Formula
   desc "Keyboard-first RAW culling workspace for macOS"
   homepage "https://github.com/zjywill/Pickroom"
   url "ssh://git@github.com/zjywill/Pickroom.git",
-      tag:      "v0.1.1",
-      revision: "184f783790514656d1b48f333a612555859043b9"
+      tag:      "v0.1.2",
+      revision: "e86f7af4730e5e3156a01aeee9ffe7db9aa82855"
 
   livecheck do
     url :stable
@@ -27,6 +27,15 @@ class Pickroom < Formula
       #!/bin/bash
       exec "#{opt_prefix}/Pickroom.app/Contents/MacOS/Pickroom" "$@"
     SH
+  end
+
+  def post_install
+    app = prefix/"Pickroom.app"
+    framework = app/"Contents/Frameworks/LibRaw.framework"
+    system "/usr/bin/codesign", "--force", "--sign", "-", "--timestamp=none",
+           "--generate-entitlement-der", framework
+    system "/usr/bin/codesign", "--force", "--sign", "-", "--timestamp=none",
+           "--generate-entitlement-der", app
   end
 
   def caveats

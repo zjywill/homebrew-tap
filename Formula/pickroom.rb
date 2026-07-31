@@ -2,8 +2,8 @@ class Pickroom < Formula
   desc "Keyboard-first RAW culling workspace for macOS"
   homepage "https://github.com/zjywill/Pickroom"
   url "ssh://git@github.com/zjywill/Pickroom.git",
-      tag:      "v0.1.4",
-      revision: "0abf969167de188e83d8b42d8e9eedb76d23e297"
+      tag:      "v0.1.5",
+      revision: "27cbaf403fdb7cc4aa9755f71e6719b910393a0d"
 
   livecheck do
     url :stable

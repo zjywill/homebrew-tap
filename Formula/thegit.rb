@@ -1,8 +1,8 @@
 class Thegit < Formula
   desc "Lightweight native Git client for macOS"
   homepage "https://github.com/zjywill/TheGit"
-  url "https://github.com/zjywill/TheGit/archive/refs/tags/v0.10.6.tar.gz"
-  sha256 "428b64594a3f88d31d4ba7f4c9cd64ea02d2728eb8f29b8c6177e7a08ed1184d"
+  url "https://github.com/zjywill/TheGit/archive/refs/tags/v0.10.7.tar.gz"
+  sha256 "0213dbc569767bf247a58f0a583bd50e345066858b85048102e046e7a4e6bd48"
   license "MIT"
 
   # Tags, not releases: the source repo publishes no GitHub Release object,

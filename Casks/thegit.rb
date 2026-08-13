@@ -1,6 +1,6 @@
 cask "thegit" do
   version "0.10.8"
-  sha256 "8c26f17973e9d69efbb0e31f5c7ec468ba45a6dadbc8a5d9d4c7d6dd4f7aefb4"
+  sha256 "988ee0f1c28851fd34da379b3bb37e513929c2cc7087d695fec1fbb833c7be7d"
 
   url "https://github.com/zjywill/TheGit/releases/download/v#{version}/TheGit-#{version}.dmg"
   name "TheGit"

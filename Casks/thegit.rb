@@ -12,7 +12,9 @@ cask "thegit" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  # Bare symbol, not ">= :sonoma": Homebrew 6 reads a symbol as a minimum and
+  # deprecates the string form, which every brew command then warns about.
+  depends_on macos: :sonoma
 
   app "TheGit.app"
 

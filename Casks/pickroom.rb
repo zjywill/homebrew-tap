@@ -1,6 +1,6 @@
 cask "pickroom" do
-  version "0.4.0"
-  sha256 "be83851d9a9a3f944e6416d652a951e63b8a74929d9d78c85e26d7f8b5a782e1"
+  version "0.5.0"
+  sha256 "0fe7f663f65afa048b6164af75208258ac9b3bfb4b92ed558e76f299cfee5ad4"
 
   url "https://github.com/zjywill/Pickroom/releases/download/v#{version}/Pickroom-#{version}.dmg"
   name "Pickroom"
